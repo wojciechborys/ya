@@ -1,0 +1,309 @@
+.header-nav ul a{
+    font-size:12px;
+}
+.hero__except{
+    font-size:13px;
+}
+.hero__arrow{
+    font-size:11.72px;
+}
+
+.testimonials-slider__card-quote{
+    font-size:18px;
+}
+.our-vision__thumbnail p{
+    font-size:11px;
+}
+.working-process__list-text{
+    font-size:12px;
+}
+
+.testimonials-slider {
+    background-color: #f3f3f3;
+}
+.content-page__main .short-box{
+    margin-top: 50px;
+    margin-bottom:84px;
+    max-width: 620px;
+    background: rgba(243,243,243,0.75);
+}
+.content-page__main .short-box .testimonials-slider, .content-page__main .short-box .testimonials-slider__card{
+    background: none;
+}
+.content-page__main .short-box:last-child{
+    margin-bottom:-30px;
+}
+.btn.js__set-cookie{
+    background-color: #6FA935;
+}
+.toggle-nav{
+    margin-left:0;
+}
+@media (max-width:1251px){
+    .working-process__grid {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left:0;
+    }
+    .working-process__main{
+        padding-left:0;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width:1252px){
+    .working-process__list{
+        max-width:420px;
+    }
+    .working-process__list-item:before{
+        content: '';
+        position: absolute;
+        transform-origin: left bottom;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid #C9C9C9;
+        z-index: 10;
+    }
+
+    .working-process__list-item:nth-child(1):before{
+        left: calc(100% + 191px);
+        bottom: -44px;
+        transform: rotate(70deg);
+    }
+
+    .working-process__list-item:nth-child(2):before{
+        left: calc(100% + 190px);
+        top: 49%;
+        transform: rotate(30deg);
+    }
+    .working-process__list-item:nth-child(3):before{
+        left: calc(100% + 203px);
+        top: -28px;
+        transform: rotate(-130deg);
+    }
+    .working-process__list-item:nth-child(2):after{
+        top:53%;
+    }.working-process__list-item:nth-child(3):after {
+         width: 206px;
+         transform-origin: left bottom;
+         transform: rotate(-35deg);
+     }
+
+}
+
+.working-process__list {
+    flex: unset;
+}
+@media (max-width:991px){
+    .img-with-content{
+        padding:0;
+    }
+    .img-with-content__inner{
+        padding-left:0;
+    }
+    .img-with-content__img{
+        position:relative;
+        width:100%;
+    }
+    .subscribe__inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .subscribe__form, .subscribe__form-input{
+        height:45px;
+    }
+    .subscribe__form-btn{
+        width:45px;
+    }
+    .impact-card {
+        min-height: 436px;
+    }
+}
+.content-page__main .testimonials-slider__card {
+    max-width: 70%;
+}
+@media (max-width:767px){
+    .content-page__main .testimonials{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.impact-card:hover .impact-card__inner{
+    color: #fff;
+}
+
+.working-process__list-img img {
+    max-width: 45px;
+}
+.partner-section .wrap .gallery img, .partners-grid__card img {
+    border: 1px solid #ECECEC;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.partners-grid{
+    grid-template-columns: 200px 200px;
+}
+.partners-grid__card{
+    height:200px;
+    width:200px;
+}
+.content-page-smaller-part .two-photos__large img {
+    max-width: 450px;
+}
+@media (max-width:767px) {
+    .two-photos__excerpt{
+        display:none;
+    }
+    .content-page__thumbnail .img-fluid {
+        max-height: 553px;
+        height: auto;
+    }
+    .latest-card.scrolled .latest-card__inner {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .latest-card.scrolled::after {
+        opacity: 1;
+    }
+}
+.text-red{
+    color: #e02020;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.donation-widget__card .pt-field-prefill-warning{
+    display:none;
+}
+.donation-radio-checkbox .pt-radio-group label {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    margin-left: 0px;
+    padding-left: 28px;
+    position: relative;
+    cursor: pointer;
+}
+.donation-radio-checkbox .pt-radio-group label::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #1D81B7;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.25s ease-in-out;
+}
+.donation-radio-checkbox input[type="radio"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.donation-radio-checkbox .pt-radio-group label::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 6px;
+    background: url("../img/icons/checkbox.svg") no-repeat center/contain;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.25s ease-in-out;
+}
+
+.donation-checkbox label.label-checked::before,.donation-radio-checkbox label.label-checked::before {
+    background-color: #1D81B7;
+}
+.donation-checkbox label.label-checked::after,.donation-radio-checkbox label.label-checked::after {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.donation-checkbox{
+    padding-bottom:5px;
+}
+.content-page__main .franchise-process__list-item:not(:last-child) {
+    margin-bottom: 33px;
+}
+.content-page__main .working-process__main-img{
+    margin-top:85px;
+    margin-bottom:88px;
+}
+.donation-widget__notification{
+    margin-top: 20px;
+
+    min-height: 80px;
+}
+.donation-widget__notification:before {
+
+    height: 21px;
+}
+.donation-widget__footer{
+    margin-top:20px;
+}
+.donation-widget__card:not(:last-of-type){
+    margin-bottom:45px;
+}
+.donation-widget__card-title{
+    margin-bottom:20px;
+}
+.donation-radio-checkbox, .donation-field:not(:last-of-type){
+    margin-bottom:30px;
+}
+.donation-checkbox{
+    margin-bottom:51px;
+}
+.donation-checkbox>label{
+    display:none;
+}
+.where-card:hover{
+    box-shadow: 0 10px 60px rgba(22, 19, 19, 0.1), 0 23px 20px -20px rgba(0, 0, 0, 0.34);
+}
+.subscribe__form .mc4wp-form-fields{
+    position:relative;
+}
+.template-x5 .wrap{
+    max-width:1054px;
+}
+.template-x5 .content-page__text, .template-x5 .content-page__text p{
+    max-width:100%;
+}
+@media (min-width:768px) {
+    .template-x5 .content-page-title.content {
+        width: 40%;
+    }
+}
+.content-without-padding{
+    padding:0;
+}
+.header.header--front{
+    z-index:2;
+}
+.header__inner{
+    justify-content: space-between;
+}
+.header-logo,.header-nav ul, .lags-wrp{
+    margin-right:0;
+}
+
+@media (max-width:991px){
+    .our-mission__sign{
+        bottom:-75px;
+    }
+}
+x

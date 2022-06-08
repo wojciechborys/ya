@@ -1,0 +1,19 @@
+.first-content {
+	.wrap {
+		max-width: 1103px;
+	}
+	&__inner {
+		padding: 73px 0 47px;
+		max-width: 650px;
+	}
+	@include r($phablet) {
+		&__inner {
+			padding: 45px 0 0;
+		}
+		h3 {
+			max-width: 243px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}

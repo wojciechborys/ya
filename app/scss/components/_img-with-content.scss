@@ -1,0 +1,33 @@
+.img-with-content {
+	.wrap {
+		max-width: 1100px;
+	}
+	&__inner {
+		position: relative;
+		padding: 0 85px 98px 296px;
+		margin-top: 81px;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 215px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		p {
+			margin: 36px 0 0;
+			font-size: 11px;
+			line-height: 1.6;
+		}
+	}
+	@include r($tablet) {
+		&__inner {
+			padding-left: 260px;
+			padding-right: 0;
+			margin-top: 60px;
+			padding-bottom: 60px;
+		}
+	}
+}

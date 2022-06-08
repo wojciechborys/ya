@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="61px" viewBox="0 0 60 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>noun_School_3046355 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="noun_School_3046355-Copy" transform="translate(0.000000, 0.125000)" fill="#1D81B7" fill-rule="nonzero">
+            <g id="Group">
+                <path d="M59,0 L1,0 C0.44771525,0 0,0.44771525 0,1 L0,40 C0,40.5522847 0.44771525,41 1,41 L24.42,41 L16.37,58 L8,58 L8,60.0000378 L17,60.0000378 C17.3859473,60.0033764 17.7380836,59.7803567 17.9,59.43 L26.63,41 L33.37,41 L42.1,59.43 C42.2619164,59.7803567 42.6140527,60.0033764 43,60.0000378 L52,60.0000378 L52,58 L43.63,58 L35.58,41 L59,41 C59.5522847,41 60,40.5522847 60,40 L60,1 C60,0.44771525 59.5522847,0 59,0 Z M58,39 L2,39 L2,36 L58,36 L58,39 Z M43,34 L43,30 L53,30 L53,34 L43,34 Z M58,34 L55,34 L55,29 C55,28.4477153 54.5522847,28 54,28 L42,28 C41.4477153,28 41,28.4477153 41,29 L41,34 L2,34 L2,2 L58,2 L58,34 Z" id="Shape"></path>
+                <rect id="Rectangle" x="6" y="5" width="6" height="2"></rect>
+                <rect id="Rectangle" x="16" y="5" width="14" height="2"></rect>
+                <rect id="Rectangle" x="34" y="5" width="20" height="2"></rect>
+                <rect id="Rectangle" x="6" y="10" width="24" height="2"></rect>
+                <rect id="Rectangle" x="34" y="10" width="10" height="2"></rect>
+                <rect id="Rectangle" x="48" y="10" width="6" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

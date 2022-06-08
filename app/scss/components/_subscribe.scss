@@ -1,0 +1,164 @@
+.subscribe {
+	padding: 38px 0 0;
+	background-color: #F3F3F3;
+	&__pattern {
+		width: 100%;
+		height: 74px;
+		background-image: url('../img/svg/footer-pattern.svg');
+		background-repeat: repeat-x;
+		background-size: auto 74px;
+		background-position: center;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 40px 102px 42px 73px;
+	}
+	&__copyright {
+		display: none;
+		text-align: center;
+		font-size: 11px;
+		line-height: 1.3;
+		color: rgba($white, .8);
+		margin-top: 22px;
+	}
+	&__socials {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 1;
+		list-style-type: none;
+		flex: 0 0 203px;
+		white-space: nowrap;
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			&:not(:last-child) {
+				margin-right: 25px;
+			}
+		}
+		a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			background-color: $blue;
+			&:hover  {
+				background-color: $green;
+			}
+		}
+	}
+	&__notification {
+		font-family: $font-rubik;
+		font-size: 11px;
+		line-height: 1.6;
+		color: $blue;
+		flex: 0 0 273px;
+		padding-left: 76px;
+		border-left: 1px solid rgba($black, .16);
+	}
+	&__form {
+		flex: 1;
+		margin-left: 75px;
+		position: relative;
+		&-input {
+			width: 100%;
+			height: 60px;
+			background-color: $white;
+			border: 1px solid #DDDFE7;
+			border-radius: 4px;
+			font-family: $font-rubik;
+			font-size: 14px;
+			line-height: 1;
+			padding: 0 80px 0 21px;
+			outline: 0;
+			transition: $transition;
+			&:focus {
+				border-color: #ccc;
+			}
+			&::placeholder {
+				color: rgba($black, .2);
+			}
+			&.error {
+				border-color: red;
+			}
+		}
+		&-btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 60px;
+			background-color: $orange;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			transition: $transition;
+			&:hover {
+				background-color: $orange-hover;
+			}
+		}
+	}
+	@include r($laptop) {
+		&__inner {
+			padding: 40px 30px;
+		}
+	}
+	@include r($tablet) {
+		&__inner {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		&__socials {
+			flex: unset;
+		}
+		&__notification {
+			padding-left: 30px;
+			margin-left: 30px;
+			flex: 0 0 200px;
+		}
+		&__form {
+			margin-left: 30px;
+		}
+	}
+	@include r($tablet) {
+		padding-top: 22px;
+		background-color: $blue;
+		&__pattern {
+			height: 30px;
+			background-image: url('../img/svg/footer-pattern--mob.svg');
+			background-size: auto 30px;
+		}
+		&__inner {
+			flex-direction: column-reverse;
+			align-items: stretch;
+			padding-top: 24px;
+			padding-bottom: 32px;
+		}
+		&__copyright {
+			display: block;
+		}
+		&__socials {
+			text-align: center;
+			margin-top: 26px;
+			a {
+				background-color: $white;
+			}
+			svg path {
+				fill: $blue;
+			}
+		}
+		&__notification {
+			display: none;
+		}
+		&__form {
+			flex: unset;
+			margin-left: 0;
+		}
+	}
+}

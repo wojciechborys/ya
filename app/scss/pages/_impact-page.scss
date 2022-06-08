@@ -1,0 +1,28 @@
+.impact-page {
+	.hero__inner {
+		padding-top: 0;
+	}
+	.impact {
+		padding-top: 42px;
+	}
+	.numbers {
+		padding: 0;
+		&__inner {
+			padding-top: 45px;
+			padding-bottom: 70px;
+		}
+		&__sign {
+			bottom: 0;
+		}
+	}
+	@include r($phablet) {
+		.hero {
+			&__inner {
+				margin: 0 -32px;
+			}
+			&__content {
+				display: none;
+			}
+		}
+	}
+}

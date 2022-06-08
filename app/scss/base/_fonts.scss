@@ -1,0 +1,23 @@
+@import "mixins/_font-face";
+
+/* Merriweather Font */
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-Light", 300);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-LightItalic", 300, Italic);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-Regular", 400);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-Italic", 400, Italic);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-Bold", 700);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-BoldItalic", 700, Italic);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-Black", 900);
+@include font-face("Merriweather", "../fonts/Merriweather/Merriweather-BlackItalic", 900, Italic);
+
+/* Rubik Font */
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Light", 300);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-LightItalic", 300, Italic);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Regular", 400);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Italic", 400, Italic);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Medium", 500);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-MediumItalic", 500, Italic);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Bold", 700);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-BoldItalic", 700, Italic);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Black", 900);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-BlackItalic", 900, Italic);

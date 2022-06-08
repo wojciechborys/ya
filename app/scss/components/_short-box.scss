@@ -1,0 +1,47 @@
+.short-box {
+	margin-top: 104px;
+	position: relative;
+	margin-left: -104px;
+	margin-right: -126px;
+	padding: 51px 0 45px 104px;
+	background-color: #F3F3F3;
+	&__sign {
+		max-width: 395px;
+		height: auto;
+		position: absolute;
+		bottom: 115px;
+		right: -164px;
+	}
+	&__title {
+		font-family: $font-rubik;
+		font-size: 53.75px;
+		line-height: 1;
+		color: $blue;
+	}
+	&__excerpt {
+		font-family: $font-rubik;
+		font-size: 20px;
+		line-height: 1.3;
+		margin-top: 15px;
+		max-width: 210px;
+	}
+	.brdr-link {
+		margin-top: 19px;
+	}
+	@include r($laptop) {
+		padding-left: 50px;
+		margin-left: -50px;
+	}
+	@include r($tablet) {
+		margin-top: 60px;
+		margin-right: -32px;
+		&__title {
+			font-size: 32.25px;
+		}
+		&__sign {
+			max-width: 262px;
+			bottom: calc(100% - 40px);
+			right: -95px;
+		}
+	}
+}

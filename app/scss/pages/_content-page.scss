@@ -1,0 +1,146 @@
+.content-page {
+  display: flex;
+  align-items: flex-start;
+
+  &__thumbnail {
+    flex: 1;
+    min-width: 50%;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 1200px) {
+      max-width: 50px;
+
+    }
+
+    .img-fluid {
+      min-width: 100%;
+      @media (min-width: 768px) {
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__sign {
+    position: absolute;
+    z-index: 1;
+    left: -320px;
+    bottom: -255px;
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 50%;
+    padding: 0 105px;
+    position: relative;
+
+    @media (min-width: 1200px) {
+      max-width: 740px;
+      min-width: inherit;
+
+    }
+
+    &-sign {
+      position: absolute;
+      top: 0;
+      right: -92px;
+      width: 395px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 27.25px;
+    color: $blue;
+    margin: 69px 0 26px;
+    max-width: 380px;
+  }
+
+  &__text {
+    padding-right: 40px;
+
+    p {
+      @media (min-width: 768px) {
+        margin-right: 69px;
+        max-width: 380px;
+      }
+    }
+  }
+
+  @include r($laptop) {
+    &__main {
+      padding-right: 0;
+      padding-left: 50px;
+    }
+  }
+  @include r($tablet) {
+    &__main-sign {
+      display: none;
+    }
+    &__sign {
+      max-width: 80%;
+      min-width: 225px;
+      left: -50px;
+      bottom: -50px;
+    }
+    &__title {
+      margin-top: 30px;
+      font-size: 23px;
+    }
+    &__text {
+      padding-right: 0;
+    }
+  }
+  @include r($phablet) {
+    flex-direction: column;
+    align-items: stretch;
+    &__thumbnail {
+      min-width: 100%;
+      width: calc(100% + 64px);
+      flex: unset;
+      margin-left: -32px;
+      margin-right: -32px;
+
+      .img-fluid {
+        height: 553px;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      &--small .img-fluid {
+        height: 258px;
+      }
+    }
+    &__sign {
+      left: auto;
+      right: -60px;
+      bottom: -57px;
+      max-width: 50%;
+    }
+    &__main {
+      padding-left: 0;
+    }
+    &__title {
+      margin-top: 98px;
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+  }
+}
+
+.content-img {
+  display: block;
+  height: auto;
+  width: calc(100% + 90px);
+  margin-bottom: 54px;
+  @include r($laptop) {
+    width: calc(100% + 72px);
+  }
+  @include r($tablet) {
+    width: calc(100% + 32px);
+  }
+  @include r($phablet) {
+    width: 100%;
+  }
+}

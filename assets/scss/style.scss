@@ -1,0 +1,45 @@
+// --------------------------------------------------
+// vars
+
+//@import "partials/variables";
+
+// --------------------------------------------------
+// Bootstrap 4.1
+//@import "../node_modules/bootstrap-scss/bootstrap-reboot";
+//@import "../node_modules/bootstrap-scss/bootstrap-grid";
+
+// --------------------------------------------------
+
+// Uikit 3.1.4
+//@import "../node_modules/uikit/src/scss/variables-theme";
+//@import "../node_modules/uikit/src/scss/mixins-theme";
+//@import "../node_modules/uikit/src/scss/uikit-theme";
+
+// mixins
+//@import "mixins/fonts";
+//@import "mixins/images";
+//@import "mixins/helpers";
+
+// --------------------------------------------------
+// partials
+//@import "partials/base";
+//@import "partials/icons";
+//@import "partials/buttons";
+//@import "partials/type";
+
+// --------------------------------------------------
+// layout
+@import "layout/footer";
+@import "layout/header";
+@import "layout/main";
+@import "layout/nav";
+
+// --------------------------------------------------
+// components
+
+// @import your components here
+
+// --------------------------------------------------
+// views
+
+// @import your views/pages here

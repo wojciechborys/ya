@@ -1,0 +1,141 @@
+.numbers {
+	padding: 103px 0 20px;
+	position: relative;
+	&__inner {
+		padding-left: 50px;
+		position: relative;
+	}
+	&__sign {
+		position: absolute;
+		bottom: 27px;
+		left: calc(100% - 203px);
+	}
+	.brdr-link {
+		margin: 54px 0 0 55px;
+	}
+	&--second {
+		.numbers {
+			&__inner {
+				padding-left: 105px;
+			}
+			&__sign {
+				bottom: -61px;
+			}
+		}
+		.brdr-link {
+			margin-top: 80px;
+		}
+	}
+	&--grey {
+		padding: 0;
+		background-color: #F3F3F3;
+		.numbers {
+			&__inner {
+				padding: 64px 0 122px 105px; 
+				padding-left: 105px;
+			}
+			&__sign {
+				top: -45px;
+			}
+		}
+	}
+	@include r($laptop) {
+		.numbers-list {
+			grid-column-gap: 50px;
+		}
+	}
+	@include r($tablet) {
+		&__inner {
+			padding-left: 0;
+		}
+		&__sign {
+			max-width: 40%;
+			min-width: 225px;
+			right: -158px;
+			bottom: 175px; 
+		}
+		.brdr-link {
+			margin-left: 0;
+		}
+		&--second {
+			.numbers__inner {
+				padding-left: 0;
+			}
+			.brdr-link {
+				margin-top: 54px;
+			}
+		}
+		&--grey {
+			.numbers {
+				&__inner {
+					padding-left: 32px;
+					padding-right: 32px;
+					padding-bottom: 60px;
+					margin: 0 -32px;
+				}
+				&__sign {
+					right: -158px;
+					bottom: 100%;
+				}
+			}
+		}
+	}
+	@include r($phablet) {
+		padding: 40px 0 20px;
+		&__sign {
+			display: none;
+		}
+		&--grey {
+			padding-top: 0;
+			padding-bottom: 105px;
+			background-color: transparent;
+			.numbers__inner {
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.numbers-list {
+	margin: 0;
+	padding: 52px 0 0 53px;
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 208px 208px 252px;
+	grid-column-gap: 104px;
+	font-family: $font-rubik;
+	position: relative;
+	z-index: 1;
+	&--two {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 50px;
+	}
+	&__numeric {
+		font-size: 53.75px;
+		line-height: 1;
+		color: $blue;
+	}
+	&__text {
+		margin: 15px 0 0;
+		font-size: 20px;
+		line-height: 1.32;
+	}
+	@include r($tablet) {
+		padding: 0;
+		grid-template-columns: repeat(3, 1fr);
+    	grid-column-gap: 20px;
+		&__numeric {
+			font-size: 40px;
+		}
+		&__text {
+			margin-top: 5px;
+		}
+	}
+	@include r($phablet) {
+		display: block;
+		li:not(:last-child) {
+			margin-bottom: 65px;
+		}
+	}
+}

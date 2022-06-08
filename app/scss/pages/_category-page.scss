@@ -1,0 +1,135 @@
+.category-page {
+	margin-top: 34px;
+	padding-bottom: 55px;
+	position: relative;
+	.wrap {
+		max-width: 1103px;
+		position: relative;
+	}
+	&__controls {
+		margin: 52px 0 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.section-title {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		font-size: 53.75px;
+		line-height: 1;
+		color: $blue;
+		position: relative;
+		z-index: 1;
+	}
+	&__dropdown {
+		display: none;
+		position: relative;
+		&.is-opened &-current:after {
+			transform: scaleY(-1)
+		}
+		&-current {
+			display: inline-block;
+			font-size: 12px;
+			font-family: $font-rubik;
+			font-weight: 700;
+			border-bottom: 1px solid;
+			padding-bottom: 1px;
+			color: $blue;
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 8px;
+				height: 4px;
+				margin: -2px 0 0 9px;
+				background: url('../img/icons/carret-dropdown.svg') no-repeat center;
+				transition: $transition;
+			}
+		}
+		&-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			position: absolute;
+			z-index: 2;
+			top: calc(100% - 1px);
+			right: 0;
+			background-color: $white;
+			border-top: 2px solid $blue;
+			min-width: 135px;
+			box-shadow: 0 0 24px rgba($black, .06);
+			display: none;
+			li:not(:last-child) {
+				border-bottom: 1px solid rgba($blue, .15);
+			}
+			a {
+				display: block;
+				font-size: 12px;
+				line-height: 1;
+				padding: 8px 12px;
+			}
+		}
+	}
+	&__list {
+		margin: 31px 0 0;
+		padding: 0;
+		list-style-type: none;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		overflow-x: auto;
+		li {
+			&:not(:last-child) {
+				margin-right: 26px;
+			}
+		}
+		a {
+			display: inline-block;
+			font-size: 12px;
+			font-family: $font-rubik;
+			font-weight: 700;
+			color: rgba($black, .2);
+			border-bottom: 1px solid;
+			padding-bottom: 1px;
+			&:hover {
+				color: rgba($black, .4);
+			}
+			&.is-current {
+				color: $blue;
+			}
+		}
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 24px;
+		position: relative;
+		z-index: 1;
+	}
+	&__footer {
+		text-align: center;
+		padding-top: 40px;
+	}
+	&__sign {
+		position: absolute;
+		top: 27px;
+		left: calc(100% - 420px);
+	}
+	@include r($phablet) {
+		&__grid {
+			grid-template-columns: 1fr;
+		}
+		&__sign, &__list, &__title {
+			display: none;
+		}
+		&__controls {
+			margin: 0 0 16px;
+		}
+		&__dropdown {
+			display: block;
+		}
+	}
+}

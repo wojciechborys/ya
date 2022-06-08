@@ -1,0 +1,232 @@
+.history-timeline {
+	background-color: #F3F3F3;
+	&__inner {
+		padding: 61px 104px 0;
+	}
+	&__logo {
+		margin: -40px auto 42px;
+	}
+	&__loop {
+		position: relative;
+		padding: 90px 0 192px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: calc(50% - 1px);
+			width: 2px;
+			height: 100%;
+			background-color: $blue;
+		}
+	}
+	&__card {
+		display: flex;
+		align-items: center;
+		width: 50%;
+		position: relative;
+		justify-content: flex-end;
+		&:nth-of-type(odd) {
+			padding-right: 106px;
+			.history-timeline__card {
+				&-img {
+					order: 2;
+					margin-right: 0;
+					margin-left: 44px;
+				}
+				&-content {
+					order: 1;
+					text-align: right;
+				}
+			}
+		}
+		&:nth-of-type(even) {
+			margin-left: auto;
+			&:before {
+				right: auto;
+				left: -4px;
+			}
+			&:after {
+				right: auto;
+				left: 0;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			background-color: $blue;
+			top: calc(50% - 4px);
+			right: -4px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			height: 1px;
+			width: 60px;
+			border-bottom: 2px dashed $blue;
+			top: calc(50% - 1px);
+			right: 0;
+		}
+		&-img {
+			flex: 0 0 161px;
+			border: 7px solid $white;
+			margin-right: 44px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-content {
+			max-width: 211px;
+		}
+		&-title {
+			margin: 0;
+			color: $blue;
+			font-size: 17px;
+			line-height: 1.3;
+		}
+		&-excerpt {
+			font-size: 11px;
+			color: rgba($black, .75);
+			p {
+				margin: 0;
+			}
+		}
+	}
+	&__footer {
+		text-align: center;
+		position: relative;
+		background-color: $white;
+		padding: 210px 0 92px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: calc(50% - 1px);
+			width: 2px;
+			height: 180px;
+			background-color: $blue;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 60px;
+			left: calc(50% - 1px);
+			width: 1px;
+			height: 80px;
+			border-right: 2px dashed $blue;
+			background-color: $white;
+		}
+		p {
+			margin: 0 0 14px;
+			font-family: $font-rubik;
+			color: $blue;
+			font-size: 17px;
+			line-height: 1.3;
+		}
+	}
+	@include r($laptop) {
+		&__inner {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		&__card {
+			padding-left: 80px;
+			&:nth-of-type(odd) {
+				padding-right: 80px;
+				padding-left: 0;
+				.history-timeline__card {
+					&-img {
+						margin-left: 25px;
+					}
+				}
+			}
+			&-img {
+				margin-right: 25px;
+			}
+		}
+	}
+	@include r($tablet) {
+		&__inner {
+			margin: 0 -32px;
+		}
+		&__logo {
+			margin: 55px auto 30px;
+		}
+		&__loop {
+			padding: 0 0 160px;
+			&:before {
+				display: block;
+				position: static;
+				width: 8px;
+				height: 117px;
+				margin: 0 auto 10px;
+				background: url('../img/svg/timeline-start.svg') no-repeat center / contain;
+			}
+		}
+		&__card {
+			width: 100%;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
+			&:not(:last-child) {
+				&:after {
+					content: '';
+					display: block;
+					position: static;
+					width: 8px;
+					height: 110px;
+					background: url('../img/svg/timeline-separator.svg') no-repeat center / contain;
+					border-bottom: 0;
+					margin: 18px auto;
+					order: 3;
+				}
+			}
+			&:last-of-type {
+				&:after {
+					display: none;
+				}
+			}
+			&:nth-of-type(odd) {
+				padding-right: 0;
+				.history-timeline__card {
+					&-img {
+						order: 1;
+						margin-left: 0;
+					}
+					&-content {
+						order: 2;
+						text-align: center;
+					}
+				}
+			}
+			&-img {
+				margin-right: 0;
+				margin-bottom: 17px;
+			}
+			&-content {
+				text-align: center;
+			}
+		}
+		&__footer {
+			padding-top: 130px;
+			padding-bottom: 45px;
+			&:after {
+				display: none;
+			}
+			&:before {
+				display: block;
+				position: absolute;
+				top: -130px;
+				margin: 0 auto 45px;
+				background-color: transparent;
+				height: 233px;
+				background: url('../img/svg/timeline-finish.svg') no-repeat center / contain;
+			}
+		}
+	}
+}

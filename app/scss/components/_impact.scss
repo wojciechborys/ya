@@ -1,0 +1,147 @@
+.impact {
+	padding: 65px 0 0;
+	.section-title {
+		margin-bottom: 20px;
+		margin-left: 39px;
+	}
+	&__loop {
+		display: flex;
+		& > div {
+			flex: 1;
+			min-width: 30%;
+			&:not(:last-child) {
+				margin-right: 1px;
+			}
+		}
+		.slick-list {
+			margin-right: -32px;
+			padding-right: 16px;
+		}
+		.slick-slide {
+			margin-right: 16px;
+		}
+	}
+	&--shortcode {
+		margin-left: -105px;
+		margin-right: -145px;
+		padding: 20px 0 90px;
+		.impact-card {
+			svg {
+				width: 178px;
+				height: auto;
+			}
+			&__inner {
+				min-height: 205px;
+				padding: 45px 55px 15px 80px; 
+			}
+			&__title {
+				margin-bottom: 0 !important;
+			}
+			&__excerpt {
+				margin-top: 18px;
+			}
+		}
+	}
+	@include r($laptop) {
+		&--shortcode {
+			margin-right: -72px;
+			margin-left: -50px;
+		}
+	}
+	@include r($tablet) {
+		.section-title {
+			margin-left: 0;
+		}
+		&__loop {
+			& > div {
+				flex: unset;
+			}
+		}
+		&--shortcode {
+			margin-right: 0;
+			margin-left: 0;
+			.impact__loop {
+				margin-right: 0;
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	@include r($phablet) {
+		padding-top: 50px;
+	}
+}
+
+.impact-card {
+	position: relative;
+	background-color: #F3F3F3;
+	height: 100%;
+	transition: $transition;
+	&:hover {
+		background-color: $green;
+		color: $white;
+		.impact-card__title a {
+			color: $white;
+			border-color: $white;
+		}
+		svg path {
+			fill: #F3F3F3;
+		}
+	}
+	svg path {
+		transition: $transition;
+	}
+	&__inner {
+		min-height: 275px;
+		padding: 63px 106px 15px;
+	}
+	&__title {
+		font-size: 20px;
+		margin: 0;
+		a {
+			color: $black;
+			border-bottom: 2px solid transparent;
+			padding-bottom: 8px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&__excerpt {
+		margin-top: 36px;
+		p {
+			margin: 0;
+		}
+	}
+	@include r($laptop) {
+		&__inner {
+			padding: 60px 50px 15px;
+		}
+	}
+	@include r($tablet) {
+		min-width: 310px;
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+	@include r($phablet) {
+		& > svg {
+			width: 175px;
+			height: auto;
+		}
+		&__inner {
+			padding: 45px 30px;
+			min-height: auto;
+		}
+		&__excerpt {
+			font-size: 13px;
+			max-width: 207px;
+		}
+	}
+}

@@ -1,0 +1,483 @@
+.donation {
+	margin-top: 90px;
+	position: relative;
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 61px 104px 59px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__sign {
+		position: absolute;
+		z-index: 1;
+		top: -51px;
+		left: -107px;
+		max-width: 422px;
+		height: auto;
+	}
+	&__thumbnail {
+		display: none;
+		width: 100%;
+		height: 252px;
+		object-fit: cover;
+	}
+	@include r($tablet) {
+		&__inner {
+			margin: 0 -32px;
+			padding: 32px;
+		}
+	}
+	@include r($phablet) {
+		&__inner {
+			padding: 0;
+			background-image: none !important;
+			flex-direction: column;
+			align-items: stretch;
+		}
+		&__sign {
+			max-width: 40%;
+			min-width: 145px;
+			left: -37px;
+			top: -52px; 
+		}
+		&__thumbnail {
+			display: block;
+		}
+	}
+}
+
+.donation-widget {
+	width: 100%;
+	max-width: 416px;
+	background-color: $white;
+	color: rgba($dark, .6);
+	padding: 70px 69px 67px;
+	position: relative;
+	&--full {
+		margin: 65px 0 72px;
+		.donation-widget {
+			&__footer {
+				justify-content: center;
+				margin-top: 26px;
+			}
+		}
+	}
+	&__card {
+		&:not(:last-of-type) {
+			margin-bottom: 50px;
+		}
+		&-title {
+			font-family: $font-rubik;
+			color: $blue;
+			font-size: 20px;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+	}
+	&__section {
+		border-bottom: 1px solid rgba($black, .15);
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	&__period {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 16px;
+	}
+	&__sum {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 71px;
+		grid-column-gap: 14px;
+		&-input {
+			input[type="number"] {
+				width: 100%;
+				height: 42px;
+				border: 0;
+				outline: 0;
+				border-bottom: 1px solid rgba($blue, .5);
+				font-family: $font-rubik;
+				color: $blue;
+				font-size: 12px;
+				font-weight: 700;
+				text-align: center;
+				appearance: textfield;
+				transition: $transition;
+				&::placeholder {
+					color: rgba($blue, .5);
+				}
+				&:focus {
+					border-color: $blue;
+				}
+				&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+					appearance: none;
+				}
+			}
+		}
+	}
+	&__notification {
+		margin-top: 27px;
+		padding-left: 25px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			bottom: 17px;
+			width: 1px;
+			background-color: $blue;
+		}
+		p {
+			margin: 0;
+		}
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 37px;
+	}
+	&__steps {
+		font-size: 12px;
+		line-height: 1;
+		font-family: $font-rubik;
+		color: rgba($black, .15);
+	}
+	&__address {
+		padding-top: 6px;
+		&-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-column-gap: 14px;
+			padding-bottom: 28px;
+			margin-bottom: 16px;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: calc(50% - 7px);
+				width: 14px;
+				height: 12px;
+				background: url('../img/svg/donation-address-arrow.svg') no-repeat center;
+			}
+		}
+		&-current {
+			font-family: $font-rubik;
+			font-size: 10px;
+			font-weight: 500;
+			color: $white;
+			background-color: rgba($blue, .5);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 42px;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 1.2;
+		}
+		&-footer {
+			text-align: center;
+			padding: 5px 0 4px;
+			a {
+				display: inline-block;
+				font-family: $font-rubik;
+				font-size: 10px;
+				border-bottom: 1px solid;
+				color: rgba($blue, .5);
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+		.donation-field {
+			margin-bottom: 0 !important;
+		}
+	}
+	@include r($tablet) {
+		&--full {
+			margin-top: 0;
+			padding: 30px 25px;
+		}
+	}
+	@include r($phablet) {
+		max-width: 100%;
+		padding: 32px;
+		&--full {
+			padding: 32px;
+			margin-left: -32px;
+			margin-right: -32px;
+			max-width: calc(100% + 64px);
+			width: calc(100% + 64px);
+			margin-bottom: 0;
+		}
+	}
+}
+
+.donation-radio {
+	position: relative;
+	overflow: hidden;
+	input[type="radio"] {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+		&:checked + label {
+			background-color: $blue;
+			border-color: $blue;
+			color: $white;
+		}
+	}
+	label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 42px;
+		border-radius: 3px;
+		border: 1px solid rgba($blue, .5);
+		margin: 0;
+		font-family: $font-rubik;
+		font-weight: 700;
+		font-size: 12px;
+		color: rgba($blue, .5);
+		cursor: pointer;
+		transition: $transition;
+		&:hover {
+			color: $blue;
+			border-color: $blue;
+		}
+	}
+}
+
+.donation-field {
+	&:not(:last-of-type) {
+		margin-bottom: 14px;
+	}
+	&__label {
+		display: block;
+		font-family: $font-rubik;
+		color: rgba($black, .5);
+		font-size: 12px;
+		line-height: 1.5;
+		margin-bottom: 3px;
+		white-space: nowrap;
+	}
+	&__input {
+		width: 100%;
+		height: 42px;
+		border: 1px solid rgba($blue, .5);
+		outline: 0;
+		font-family: $font-rubik;
+		padding: 0 17px;
+		border-radius: 3px;
+		transition: $transition;
+		&::placeholder {
+			color: rgba($blue, .5);
+		}
+		&:focus, &:hover {
+			border-color: $blue;
+		}
+	}
+}
+
+.donation-checkbox {
+	position: relative;
+	overflow: hidden;
+	padding-top: 5px;
+	input[type="checkbox"] {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+		&:checked + label {
+			&:before {
+				background-color: $blue;
+			}
+			&:after {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+	label {
+		font-size: 8px;
+		line-height: 1.5;
+		color: rgba($black, .6);
+		margin: 0;
+		margin-left: 12px;
+		padding-left: 28px;
+		position: relative;
+		cursor: pointer;
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			border-radius: 3px;
+			border: 1px solid $blue;
+			cursor: pointer;
+			background-color: transparent;
+			transition: $transition;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 5px;
+			left: 4px;
+			width: 8px;
+			height: 6px;
+			background: url('../img/icons/checkbox.svg') no-repeat center / contain;
+			opacity: 0;
+			transform: translateY(-10px);
+			transition: $transition;
+		}
+	}
+}
+
+.donation-select {
+	position: relative;
+	&__top {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 2px);
+			right: 16px;
+			width: 8px;
+			height: 4px;
+			background: url('../img/icons/carret-dropdown.svg') no-repeat center;
+			transition: $transition;
+		}
+		&:hover {
+			.donation-field__input {
+				border-color: $blue;
+			}
+		}
+		&.is-opened {
+			&:after {
+				transform: scaleY(-1);
+			}
+			.donation-field__input {
+				border-color: $blue;
+			}
+		}
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		position: absolute;
+		z-index: 2;
+		top: calc(100% + 2px);
+		right: 0;
+		width: 100%;
+		min-width: 135px;
+		background-color: $white;
+		border-radius: 3px;
+		border: 1px solid $blue;
+		display: none;
+		li {
+			font-size: 12px;
+			line-height: 1;
+			font-family: $font-rubik;
+			padding: 8px 10px;
+			cursor: pointer;
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba($blue, .15);
+			}
+			&:hover {
+				background-color: #f3f3f3;
+			}
+		}
+	}
+}
+
+.iti {
+	width: 100%;
+	z-index: 3;
+	&__flag {
+		background-image: url("../img/intl-tel-input/flags.png");
+		&-container {
+			width: 68px;
+			z-index: 1;
+			border-right: 1px solid rgba($blue, .5);
+			.iti__selected-flag .iti__flag {
+				position: relative;
+				margin-left: -12px;
+				padding: 0;
+				&:after {
+					content: '';
+					position: absolute;
+					left: calc(100% + 10px);
+					top: calc(50% - 2px);
+					width: 8px;
+					height: 4px;
+					background: url('../img/icons/carret-dropdown.svg') no-repeat center;
+					transition: $transition;
+				}
+			}
+		}
+	}
+	&__arrow {
+		display: none;
+	}
+	&__selected {
+		&-flag {
+			justify-content: center;
+			outline: 0;
+			transition: $transition;
+		}
+	}
+	&__country {
+		&-list {
+			font-family: $font-rubik;
+			max-width: 276px;
+			&::-webkit-scrollbar {
+				width: 7px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: #eee;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: $blue;
+			}
+		}
+		&-name {
+			display: inline-block;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    max-width: 65%;
+		}
+	}
+	&--allow-dropdown {
+		input {
+			padding-left: 85px !important;
+		}
+	}
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		&__flag {
+			background-image: url("../img/intl-tel-input/flags@2x.png");
+		}
+	}
+}
